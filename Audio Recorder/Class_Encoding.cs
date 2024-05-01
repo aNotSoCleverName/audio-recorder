@@ -29,6 +29,8 @@ namespace NAudio_Wrapper
 
             switch (inEncoding)
             {
+                case Enum_Encoding.wav:
+                    break;
                 case Enum_Encoding.aac:
                     MediaFoundationEncoder.EncodeToWma(reader, wavFilePathWithoutExtension + ".aac");
                     break;

@@ -40,7 +40,7 @@
               "RelativeDocumentMoniker": "Audio Recorder\\Class_Encoding.cs",
               "ToolTip": "E:\\Private Project\\Visual Studio\\Audio Recorder\\Audio Recorder\\Class_Encoding.cs",
               "RelativeToolTip": "Audio Recorder\\Class_Encoding.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAABYAAAA0AAAA",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAACAAAAAaAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-01T15:43:50.343Z",
               "EditorCaption": ""
@@ -55,8 +55,7 @@
               "RelativeToolTip": "Audio Recorder\\Class_Silence.cs",
               "ViewState": "AQIAAAkAAAAAAAAAAAAAAAoAAAASAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-30T10:22:42.034Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-30T10:22:42.034Z"
             },
             {
               "$type": "Document",
@@ -68,8 +67,7 @@
               "RelativeToolTip": "Audio Recorder\\Class_Speaker.cs",
               "ViewState": "AQIAAAwAAAAAAAAAAAAAACcAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-30T10:19:58.115Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-30T10:19:58.115Z"
             },
             {
               "$type": "Document",
@@ -81,8 +79,7 @@
               "RelativeToolTip": "Audio Recorder\\Class_Mic.cs",
               "ViewState": "AQIAACoAAAAAAAAAAAAmwD8AAABQAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-30T09:24:42.117Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-30T09:24:42.117Z"
             },
             {
               "$type": "Document",
@@ -94,8 +91,7 @@
               "RelativeToolTip": "Audio Recorder\\Class_SpeakerAndMic.cs",
               "ViewState": "AQIAACwAAAAAAAAAAAAwwDsAAAA9AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-30T10:12:03.769Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-30T10:12:03.769Z"
             }
           ]
         }
