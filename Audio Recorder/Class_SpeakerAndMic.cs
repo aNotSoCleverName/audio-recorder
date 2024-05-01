@@ -23,7 +23,7 @@ namespace NAudio_Wrapper
 
         public static void StopRecording(string inResultPath)
         {
-            resultPath = Class_Utils.GivePathExtension(".wav", inResultPath);
+            resultPath = Class_Encoding.GivePathExtension(".wav", inResultPath);
 
             Class_Speaker.StopRecording(tempSpeakerResultPath);
             Class_Mic.StopRecording(tempMicResultPath);
