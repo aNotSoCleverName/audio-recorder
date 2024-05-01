@@ -54,7 +54,7 @@ namespace NAudio_Wrapper
                 File.Delete(targetFilePath);
 
                 MediaFoundationApi.Shutdown();
-                return "This computer does not have the codec for: " + inTargetEncoding.ToString() + "\n The audio is saved as WAV instead.";
+                return "This computer does not have the codec for: " + inTargetEncoding.ToString() + "\nThe audio is saved as WAV instead.";
             }
 
             reader.Close();
