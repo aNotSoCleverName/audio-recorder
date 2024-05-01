@@ -61,7 +61,7 @@ namespace NAudio_Wrapper
         {
             if (mic == null) return;
 
-            resultPath = inResultPath;
+            resultPath = Class_Utils.GivePathExtension(".wav", inResultPath);
 
             mic.StopRecording();
             IsRecording = false;

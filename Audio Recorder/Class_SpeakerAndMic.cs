@@ -23,7 +23,7 @@ namespace NAudio_Wrapper
 
         public static void StopRecording(string inResultPath)
         {
-            resultPath = inResultPath;
+            resultPath = Class_Utils.GivePathExtension(".wav", inResultPath);
 
             Class_Speaker.StopRecording(tempSpeakerResultPath);
             Class_Mic.StopRecording(tempMicResultPath);
@@ -43,7 +43,6 @@ namespace NAudio_Wrapper
             else if (speakerReader != null && micReader != null)
             {
                 MixingSampleProvider mixer = new MixingSampleProvider(new[] { speakerReader, micReader });
-
                 WaveFileWriter.CreateWaveFile16(resultPath, mixer);
 
                 speakerReader.Close();
@@ -54,7 +53,7 @@ namespace NAudio_Wrapper
                 return;
             }
 
-            // If one null
+            // If one null, rename non-null
             if (speakerReader == null)
                 File.Move(tempMicResultPath, resultPath);
             else
@@ -71,7 +70,7 @@ namespace NAudio_Wrapper
         {
             try
             {
-                return new AudioFileReader(tempSpeakerResultPath);
+                return new AudioFileReader(inPath);
             }
             catch
             {

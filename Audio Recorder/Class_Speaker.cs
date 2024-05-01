@@ -65,7 +65,7 @@ namespace NAudio_Wrapper
         {
             if (speaker == null) return;
 
-            resultPath = inResultPath;
+            resultPath = Class_Utils.GivePathExtension(".wav", inResultPath);
 
             Class_Silence.StopSilence();
             speaker.StopRecording();
