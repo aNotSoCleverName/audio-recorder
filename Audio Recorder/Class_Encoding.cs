@@ -21,8 +21,9 @@ namespace NAudio_Wrapper
 
         /// <summary>
         /// Converts WAV file to other encoding
+        /// Returns error message
         /// </summary>
-        public static void ConvertWavToOtherEncoding(string inWavFilePath, Enum_Encoding inTargetEncoding)
+        public static string ConvertWavToOtherEncoding(string inWavFilePath, Enum_Encoding inTargetEncoding)
         {
             MediaFoundationApi.Startup();
 
@@ -34,7 +35,7 @@ namespace NAudio_Wrapper
                 switch (inTargetEncoding)
                 {
                     case Enum_Encoding.wav:
-                        return;
+                        return "";
                     case Enum_Encoding.aac:
                         targetFilePath = Path.ChangeExtension(inWavFilePath, ".aac");
                         MediaFoundationEncoder.EncodeToWma(reader, targetFilePath);
@@ -44,24 +45,24 @@ namespace NAudio_Wrapper
                         MediaFoundationEncoder.EncodeToMp3(reader, targetFilePath);
                         break;
                     default:
-                        throw new Exception("Encoding not supported");
+                        throw new Exception("Encoding not supported by DLL");
                 }
             }
             catch(COMException)     // Audio codec not installed on computer
             {
-                Debug.WriteLine("This computer does not have the codec for: " + inTargetEncoding.ToString() + "\n The audio is saved as WAV instead.");
-
                 reader.Close();
                 File.Delete(targetFilePath);
 
                 MediaFoundationApi.Shutdown();
-                return;
+                return "This computer does not have the codec for: " + inTargetEncoding.ToString() + "\n The audio is saved as WAV instead.";
             }
 
             reader.Close();
             File.Delete(inWavFilePath);
 
             MediaFoundationApi.Shutdown();
+
+            return "";
         }
 
         /// <summary>
