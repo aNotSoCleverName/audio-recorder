@@ -2,7 +2,9 @@
 using NAudio.Wave;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -20,26 +22,46 @@ namespace NAudio_Wrapper
         /// <summary>
         /// Converts WAV file to other encoding
         /// </summary>
-        public static void ConvertWavToOtherEncoding(string inWavFilePath, Enum_Encoding inEncoding)
+        public static void ConvertWavToOtherEncoding(string inWavFilePath, Enum_Encoding inTargetEncoding)
         {
             MediaFoundationApi.Startup();
 
             WaveFileReader reader = new WaveFileReader(inWavFilePath);
-            string wavFilePathWithoutExtension = Path.GetFullPath(inWavFilePath) + Path.GetFileNameWithoutExtension(inWavFilePath);
 
-            switch (inEncoding)
+            string targetFilePath = "";
+            try
             {
-                case Enum_Encoding.wav:
-                    break;
-                case Enum_Encoding.aac:
-                    MediaFoundationEncoder.EncodeToWma(reader, wavFilePathWithoutExtension + ".aac");
-                    break;
-                case Enum_Encoding.mp3:
-                    MediaFoundationEncoder.EncodeToMp3(reader, wavFilePathWithoutExtension + ".mp3");
-                    break;
-                default:
-                    throw new Exception("Encoding not supported");
+                switch (inTargetEncoding)
+                {
+                    case Enum_Encoding.wav:
+                        return;
+                    case Enum_Encoding.aac:
+                        targetFilePath = Path.ChangeExtension(inWavFilePath, ".aac");
+                        MediaFoundationEncoder.EncodeToWma(reader, targetFilePath);
+                        break;
+                    case Enum_Encoding.mp3:
+                        targetFilePath = Path.ChangeExtension(inWavFilePath, ".mp3");
+                        MediaFoundationEncoder.EncodeToMp3(reader, targetFilePath);
+                        break;
+                    default:
+                        throw new Exception("Encoding not supported");
+                }
             }
+            catch(COMException)     // Audio codec not installed on computer
+            {
+                Debug.WriteLine("This computer does not have the codec for: " + inTargetEncoding.ToString() + "\n The audio is saved as WAV instead.");
+
+                reader.Close();
+                File.Delete(targetFilePath);
+
+                MediaFoundationApi.Shutdown();
+                return;
+            }
+
+            reader.Close();
+            File.Delete(inWavFilePath);
+
+            MediaFoundationApi.Shutdown();
         }
 
         /// <summary>

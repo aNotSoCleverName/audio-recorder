@@ -53,14 +53,14 @@ namespace NAudio_Wrapper
                 return;
             }
 
+            speakerReader?.Close();
+            micReader?.Close();
+
             // If one null, rename non-null
             if (speakerReader == null)
                 File.Move(tempMicResultPath, resultPath);
             else
                 File.Move(tempSpeakerResultPath, resultPath);
-
-            speakerReader?.Close();
-            micReader?.Close();
 
             File.Delete(tempSpeakerResultPath);
             File.Delete(tempMicResultPath);

@@ -7,20 +7,20 @@
       "RelativeMoniker": "D:0:0:{B0FFCD17-C265-4046-BAD3-4A72F3EFCC9A}|Audio Recorder\\NAudio_Wrapper.csproj|solutionrelative:audio recorder\\class_encoding.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B0FFCD17-C265-4046-BAD3-4A72F3EFCC9A}|Audio Recorder\\NAudio_Wrapper.csproj|E:\\Private Project\\Visual Studio\\Audio Recorder\\audio recorder\\class_mic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B0FFCD17-C265-4046-BAD3-4A72F3EFCC9A}|Audio Recorder\\NAudio_Wrapper.csproj|solutionrelative:audio recorder\\class_mic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B0FFCD17-C265-4046-BAD3-4A72F3EFCC9A}|Audio Recorder\\NAudio_Wrapper.csproj|E:\\Private Project\\Visual Studio\\Audio Recorder\\audio recorder\\class_silence.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B0FFCD17-C265-4046-BAD3-4A72F3EFCC9A}|Audio Recorder\\NAudio_Wrapper.csproj|solutionrelative:audio recorder\\class_silence.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{B0FFCD17-C265-4046-BAD3-4A72F3EFCC9A}|Audio Recorder\\NAudio_Wrapper.csproj|E:\\Private Project\\Visual Studio\\Audio Recorder\\audio recorder\\class_speakerandmic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B0FFCD17-C265-4046-BAD3-4A72F3EFCC9A}|Audio Recorder\\NAudio_Wrapper.csproj|solutionrelative:audio recorder\\class_speakerandmic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B0FFCD17-C265-4046-BAD3-4A72F3EFCC9A}|Audio Recorder\\NAudio_Wrapper.csproj|E:\\Private Project\\Visual Studio\\Audio Recorder\\audio recorder\\class_speaker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B0FFCD17-C265-4046-BAD3-4A72F3EFCC9A}|Audio Recorder\\NAudio_Wrapper.csproj|solutionrelative:audio recorder\\class_speaker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B0FFCD17-C265-4046-BAD3-4A72F3EFCC9A}|Audio Recorder\\NAudio_Wrapper.csproj|E:\\Private Project\\Visual Studio\\Audio Recorder\\audio recorder\\class_silence.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B0FFCD17-C265-4046-BAD3-4A72F3EFCC9A}|Audio Recorder\\NAudio_Wrapper.csproj|solutionrelative:audio recorder\\class_silence.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B0FFCD17-C265-4046-BAD3-4A72F3EFCC9A}|Audio Recorder\\NAudio_Wrapper.csproj|E:\\Private Project\\Visual Studio\\Audio Recorder\\audio recorder\\class_mic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B0FFCD17-C265-4046-BAD3-4A72F3EFCC9A}|Audio Recorder\\NAudio_Wrapper.csproj|solutionrelative:audio recorder\\class_mic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -40,14 +40,14 @@
               "RelativeDocumentMoniker": "Audio Recorder\\Class_Encoding.cs",
               "ToolTip": "E:\\Private Project\\Visual Studio\\Audio Recorder\\Audio Recorder\\Class_Encoding.cs",
               "RelativeToolTip": "Audio Recorder\\Class_Encoding.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAACAAAAAaAAAA",
+              "ViewState": "AQIAABgAAAAAAAAAAAAAADAAAAANAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-01T15:43:50.343Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "Class_Silence.cs",
               "DocumentMoniker": "E:\\Private Project\\Visual Studio\\Audio Recorder\\Audio Recorder\\Class_Silence.cs",
               "RelativeDocumentMoniker": "Audio Recorder\\Class_Silence.cs",
@@ -59,19 +59,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 2,
               "Title": "Class_Speaker.cs",
               "DocumentMoniker": "E:\\Private Project\\Visual Studio\\Audio Recorder\\Audio Recorder\\Class_Speaker.cs",
               "RelativeDocumentMoniker": "Audio Recorder\\Class_Speaker.cs",
               "ToolTip": "E:\\Private Project\\Visual Studio\\Audio Recorder\\Audio Recorder\\Class_Speaker.cs",
               "RelativeToolTip": "Audio Recorder\\Class_Speaker.cs",
-              "ViewState": "AQIAAAwAAAAAAAAAAAAAACcAAAAAAAAA",
+              "ViewState": "AQIAACMAAAAAAAAAAAAIwEsAAAAeAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-30T10:19:58.115Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "Class_Mic.cs",
               "DocumentMoniker": "E:\\Private Project\\Visual Studio\\Audio Recorder\\Audio Recorder\\Class_Mic.cs",
               "RelativeDocumentMoniker": "Audio Recorder\\Class_Mic.cs",
@@ -83,13 +83,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "Class_SpeakerAndMic.cs",
               "DocumentMoniker": "E:\\Private Project\\Visual Studio\\Audio Recorder\\Audio Recorder\\Class_SpeakerAndMic.cs",
               "RelativeDocumentMoniker": "Audio Recorder\\Class_SpeakerAndMic.cs",
               "ToolTip": "E:\\Private Project\\Visual Studio\\Audio Recorder\\Audio Recorder\\Class_SpeakerAndMic.cs",
               "RelativeToolTip": "Audio Recorder\\Class_SpeakerAndMic.cs",
-              "ViewState": "AQIAACwAAAAAAAAAAAAwwDsAAAA9AAAA",
+              "ViewState": "AQIAACkAAAAAAAAAAAAwwDgAAAAfAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-30T10:12:03.769Z"
             }
