@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "cVsODiSYi56MAFF7JyI5985hZMOO5SqEwM4RPVp50Q5DbNPhrDoz5YnCb0bAHYVyyA00rek1/GgO0llEh3yovg==",
+  "dgSpecHash": "gd5X1BW3hDEWdJievACG6cRGPgkv+R/mx6W4Pobwmzm0Jpe3b+SBSh/Wo7eMMVwdgkTIFdM8syuDPD4MiQHtMQ==",
   "success": true,
-  "projectFilePath": "E:\\Private Project\\Visual Studio\\Audio Recorder\\Audio Recorder\\NAudio_Wrapper.csproj",
+  "projectFilePath": "E:\\Personal Projects\\Visual Studio\\Audio Recorder\\Audio Recorder\\NAudio_Wrapper.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\eric2\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
     "C:\\Users\\eric2\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",

@@ -57,6 +57,7 @@ namespace NAudio_Wrapper
             micReader?.Close();
 
             // If one null, rename non-null
+            File.Delete(resultPath);
             if (speakerReader == null)
                 File.Move(tempMicResultPath, resultPath);
             else

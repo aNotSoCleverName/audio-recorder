@@ -11,3 +11,16 @@ E:\Private Project\Visual Studio\Audio Recorder\Audio Recorder\obj\Debug\net8.0\
 E:\Private Project\Visual Studio\Audio Recorder\Audio Recorder\obj\Debug\net8.0\NAudio_Wrapper.pdb
 E:\Private Project\Visual Studio\Audio Recorder\Audio Recorder\obj\Debug\net8.0\ref\NAudio_Wrapper.dll
 E:\Private Project\Visual Studio\Audio Recorder\Audio Recorder\obj\Debug\net8.0\NAudio_Wrapper.sourcelink.json
+E:\Personal Projects\Visual Studio\Audio Recorder\Audio Recorder\bin\Debug\net8.0\NAudio_Wrapper.deps.json
+E:\Personal Projects\Visual Studio\Audio Recorder\Audio Recorder\bin\Debug\net8.0\NAudio_Wrapper.dll
+E:\Personal Projects\Visual Studio\Audio Recorder\Audio Recorder\bin\Debug\net8.0\NAudio_Wrapper.pdb
+E:\Personal Projects\Visual Studio\Audio Recorder\Audio Recorder\obj\Debug\net8.0\NAudio_Wrapper.csproj.AssemblyReference.cache
+E:\Personal Projects\Visual Studio\Audio Recorder\Audio Recorder\obj\Debug\net8.0\NAudio_Wrapper.GeneratedMSBuildEditorConfig.editorconfig
+E:\Personal Projects\Visual Studio\Audio Recorder\Audio Recorder\obj\Debug\net8.0\NAudio_Wrapper.AssemblyInfoInputs.cache
+E:\Personal Projects\Visual Studio\Audio Recorder\Audio Recorder\obj\Debug\net8.0\NAudio_Wrapper.AssemblyInfo.cs
+E:\Personal Projects\Visual Studio\Audio Recorder\Audio Recorder\obj\Debug\net8.0\NAudio_Wrapper.csproj.CoreCompileInputs.cache
+E:\Personal Projects\Visual Studio\Audio Recorder\Audio Recorder\obj\Debug\net8.0\NAudio_Wrapper.sourcelink.json
+E:\Personal Projects\Visual Studio\Audio Recorder\Audio Recorder\obj\Debug\net8.0\NAudio_Wrapper.dll
+E:\Personal Projects\Visual Studio\Audio Recorder\Audio Recorder\obj\Debug\net8.0\refint\NAudio_Wrapper.dll
+E:\Personal Projects\Visual Studio\Audio Recorder\Audio Recorder\obj\Debug\net8.0\NAudio_Wrapper.pdb
+E:\Personal Projects\Visual Studio\Audio Recorder\Audio Recorder\obj\Debug\net8.0\ref\NAudio_Wrapper.dll

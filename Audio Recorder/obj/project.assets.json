@@ -457,11 +457,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\Private Project\\Visual Studio\\Audio Recorder\\Audio Recorder\\NAudio_Wrapper.csproj",
+      "projectUniqueName": "E:\\Personal Projects\\Visual Studio\\Audio Recorder\\Audio Recorder\\NAudio_Wrapper.csproj",
       "projectName": "NAudio_Wrapper",
-      "projectPath": "E:\\Private Project\\Visual Studio\\Audio Recorder\\Audio Recorder\\NAudio_Wrapper.csproj",
+      "projectPath": "E:\\Personal Projects\\Visual Studio\\Audio Recorder\\Audio Recorder\\NAudio_Wrapper.csproj",
       "packagesPath": "C:\\Users\\eric2\\.nuget\\packages\\",
-      "outputPath": "E:\\Private Project\\Visual Studio\\Audio Recorder\\Audio Recorder\\obj\\",
+      "outputPath": "E:\\Personal Projects\\Visual Studio\\Audio Recorder\\Audio Recorder\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "E:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
