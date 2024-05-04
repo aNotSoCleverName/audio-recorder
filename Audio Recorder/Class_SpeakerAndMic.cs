@@ -78,23 +78,5 @@ namespace NAudio_Wrapper
                 return null;
             }
         }
-
-    //Private Function CreateWaveFormat(inBitRate As Module_ActionType.Enum_AudioBitRate) As WaveFormat
-    //    'Dim sampleRate As Integer = 44100
-    //    Dim sampleRate As Integer = 48000
-    //    Dim bitDepth As Integer
-    //    Dim channel As Integer = 2
-
-    //    Select Case inBitRate
-    //        Case Module_ActionType.Enum_AudioBitRate.Low
-    //            bitDepth = 16
-    //        Case Module_ActionType.Enum_AudioBitRate.Medium
-    //            bitDepth = 24
-    //        Case Module_ActionType.Enum_AudioBitRate.High
-    //            bitDepth = 32
-    //    End Select
-
-    //    Return New WaveFormat(sampleRate, bitDepth, channel)
-    //End Function
     }
 }

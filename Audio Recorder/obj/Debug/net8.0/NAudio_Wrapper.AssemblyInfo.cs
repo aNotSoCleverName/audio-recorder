@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("NAudio_Wrapper")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+48cf10efe7a08aa92a6ed597e83fb9d7ac19c1c0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+14e42ecc0281fd6ba81bd1bc4029dffffe7833ee")]
 [assembly: System.Reflection.AssemblyProductAttribute("NAudio_Wrapper")]
 [assembly: System.Reflection.AssemblyTitleAttribute("NAudio_Wrapper")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
