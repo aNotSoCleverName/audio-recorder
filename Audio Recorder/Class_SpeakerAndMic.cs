@@ -42,6 +42,8 @@ namespace NAudio_Wrapper
             // If none null, mix
             else if (speakerReader != null && micReader != null)
             {
+                EqualizeAudioFiles(ref speakerReader, ref micReader);
+
                 MixingSampleProvider mixer = new MixingSampleProvider(new[] { speakerReader, micReader });
                 WaveFileWriter.CreateWaveFile16(resultPath, mixer);
 
@@ -65,6 +67,54 @@ namespace NAudio_Wrapper
 
             File.Delete(tempSpeakerResultPath);
             File.Delete(tempMicResultPath);
+        }
+
+        private static void EqualizeAudioFiles(ref AudioFileReader inAudioReader1, ref AudioFileReader inAudioReader2)
+        {
+            // Don't equalize if already equal
+            if (inAudioReader1.WaveFormat.SampleRate == inAudioReader2.WaveFormat.SampleRate &&
+                inAudioReader1.WaveFormat.BitsPerSample == inAudioReader2.WaveFormat.BitsPerSample &&
+                inAudioReader1.WaveFormat.Channels == inAudioReader2.WaveFormat.Channels)
+            {
+                return;
+            }
+
+
+            // Get minimum format
+            int sampleRate = Math.Min(inAudioReader1.WaveFormat.SampleRate, inAudioReader2.WaveFormat.SampleRate);
+            int bitDepth = Math.Min(inAudioReader1.WaveFormat.BitsPerSample, inAudioReader2.WaveFormat.BitsPerSample);
+            int channelCount = Math.Min(inAudioReader1.WaveFormat.Channels, inAudioReader2.WaveFormat.Channels);
+            WaveFormat minWaveFormat = new WaveFormat(sampleRate, bitDepth, channelCount);
+
+            string tempUnequalizedPath1 = inAudioReader1.FileName;
+            string tempUnequalizedPath2 = inAudioReader2.FileName;
+
+            string tempEqualizedPath1 = ".\\equalized1.wav";
+            string tempEqualizedPath2 = ".\\equalized2.wav";
+
+            ResampleAudioFile(inAudioReader1, minWaveFormat, tempEqualizedPath1);
+            ResampleAudioFile(inAudioReader2, minWaveFormat, tempEqualizedPath2);
+
+            // Delete unequalized files, then rename equalized files to the name that unequalized files had.
+            {
+                inAudioReader1.Close();
+                inAudioReader2.Close();
+
+                File.Delete(tempUnequalizedPath1);
+                File.Delete(tempUnequalizedPath2);
+
+                File.Move(tempEqualizedPath1, tempUnequalizedPath1);
+                File.Move(tempEqualizedPath2, tempUnequalizedPath2);
+
+                inAudioReader1 = new AudioFileReader(tempUnequalizedPath1);
+                inAudioReader2 = new AudioFileReader(tempUnequalizedPath2);
+            }
+        }
+
+        private static void ResampleAudioFile(AudioFileReader inAudioReader, WaveFormat inTargetWaveFormat, string inTargetFilePath)
+        {
+            MediaFoundationResampler resampler = new MediaFoundationResampler(inAudioReader, inTargetWaveFormat);
+            WaveFileWriter.CreateWaveFile(inTargetFilePath, resampler);
         }
 
         private static AudioFileReader? TryReadAudioFile(string inPath)
