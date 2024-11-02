@@ -42,7 +42,7 @@ namespace NAudio_Wrapper
             // If none null, mix
             else if (speakerReader != null && micReader != null)
             {
-                EqualizeAudioFiles(ref speakerReader, ref micReader);
+                EqualizeAudioFilesWaveFormat(ref speakerReader, ref micReader);
 
                 MixingSampleProvider mixer = new MixingSampleProvider(new[] { speakerReader, micReader });
                 WaveFileWriter.CreateWaveFile16(resultPath, mixer);
@@ -69,7 +69,7 @@ namespace NAudio_Wrapper
             File.Delete(tempMicResultPath);
         }
 
-        private static void EqualizeAudioFiles(ref AudioFileReader inAudioReader1, ref AudioFileReader inAudioReader2)
+        private static void EqualizeAudioFilesWaveFormat(ref AudioFileReader inAudioReader1, ref AudioFileReader inAudioReader2)
         {
             // Don't equalize if already equal
             if (inAudioReader1.WaveFormat.SampleRate == inAudioReader2.WaveFormat.SampleRate &&
@@ -78,7 +78,6 @@ namespace NAudio_Wrapper
             {
                 return;
             }
-
 
             // Get minimum format
             int sampleRate = Math.Min(inAudioReader1.WaveFormat.SampleRate, inAudioReader2.WaveFormat.SampleRate);
