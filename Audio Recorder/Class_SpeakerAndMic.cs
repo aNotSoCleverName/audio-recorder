@@ -21,17 +21,32 @@ namespace NAudio_Wrapper
             Class_Mic.StartRecording();
         }
 
-        public static void StopRecording(string inResultPath)
+        /// <summary>
+        /// Stop recording both speaker and mic, and then combine the files. If combined volume is undesired, change the values for volume multiplier parameters.
+        /// </summary>
+        /// <param name="inResultPath">File path for the final resulting file.</param>
+        /// <param name="inSpeakerVolumeMult">Multiplier for speaker volume. Ranges from 0 to 1. Default is 1.</param>
+        /// <param name="inMicVolumeMult">Multiplier for mic volume. Ranges from 0 to 1. Default is 1.</param>
+        public static void StopRecording(string inResultPath, float inSpeakerVolumeMult = 1.0f, float inMicVolumeMult = 1.0f)
         {
+            // Throw error if volume mult is not in 0-1 range.
+            if (!(
+                Class_Utility.IsVolumeMultValid(inSpeakerVolumeMult) &&
+                Class_Utility.IsVolumeMultValid(inMicVolumeMult)
+            ))
+            {
+                throw new Exception("Volume multiplier must be in the range of 0 to 1");
+            }
+
             resultPath = Class_Encoding.GivePathExtension(".wav", inResultPath);
 
             Class_Speaker.StopRecording(tempSpeakerResultPath);
             Class_Mic.StopRecording(tempMicResultPath);
 
-            CombineSpeakerAndMicWav();
+            CombineSpeakerAndMicWav(inSpeakerVolumeMult, inMicVolumeMult);
         }
 
-        private static void CombineSpeakerAndMicWav()
+        private static void CombineSpeakerAndMicWav(float inSpeakerVolumeMult, float inMicVolumeMult)
         {
             AudioFileReader? speakerReader = TryReadAudioFile(tempSpeakerResultPath);
             AudioFileReader? micReader = TryReadAudioFile(tempMicResultPath);
@@ -43,6 +58,9 @@ namespace NAudio_Wrapper
             else if (speakerReader != null && micReader != null)
             {
                 EqualizeAudioFilesWaveFormat(ref speakerReader, ref micReader);
+
+                speakerReader.Volume = inSpeakerVolumeMult;
+                micReader.Volume = inMicVolumeMult;
 
                 MixingSampleProvider mixer = new MixingSampleProvider(new[] { speakerReader, micReader });
                 WaveFileWriter.CreateWaveFile16(resultPath, mixer);
@@ -91,8 +109,8 @@ namespace NAudio_Wrapper
             string tempEqualizedPath1 = ".\\equalized1.wav";
             string tempEqualizedPath2 = ".\\equalized2.wav";
 
-            ResampleAudioFile(inAudioReader1, minWaveFormat, tempEqualizedPath1);
-            ResampleAudioFile(inAudioReader2, minWaveFormat, tempEqualizedPath2);
+            Class_Utility.ResampleAudioFile(inAudioReader1, minWaveFormat, tempEqualizedPath1);
+            Class_Utility.ResampleAudioFile(inAudioReader2, minWaveFormat, tempEqualizedPath2);
 
             // Delete unequalized files, then rename equalized files to the name that unequalized files had.
             {
@@ -108,12 +126,6 @@ namespace NAudio_Wrapper
                 inAudioReader1 = new AudioFileReader(tempUnequalizedPath1);
                 inAudioReader2 = new AudioFileReader(tempUnequalizedPath2);
             }
-        }
-
-        private static void ResampleAudioFile(AudioFileReader inAudioReader, WaveFormat inTargetWaveFormat, string inTargetFilePath)
-        {
-            MediaFoundationResampler resampler = new MediaFoundationResampler(inAudioReader, inTargetWaveFormat);
-            WaveFileWriter.CreateWaveFile(inTargetFilePath, resampler);
         }
 
         private static AudioFileReader? TryReadAudioFile(string inPath)
